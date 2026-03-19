@@ -130,6 +130,7 @@ Before dispatching agents, write a clear research brief that includes:
 - What "good evidence" looks like for this question
 - **Relevance instruction to analysts**: "Your findings must directly address the question in the Precision Anchor. If your research leads to findings that are interesting but address an adjacent or different question, place them in a separate 'Adjacent Findings' section and explain how they relate (or don't) to the original question. Do not let adjacent findings displace direct answers."
 - **Industry terminology instruction to analysts**: "As part of your research, identify and collect the standard industry-specific terminology, jargon, and technical vocabulary used by practitioners in this domain. Record these terms with brief definitions in a dedicated 'Industry Terminology' section of your output. These terms will be used in the report alongside plain-language explanations."
+- **Outcome data instruction to analysts**: "For every competitor or case study example, capture both the mechanism (what they do) and the measurable outcome (what results it produced — revenue, conversion, adoption rate, cost reduction, engagement metrics). A competitor example without a quantified outcome is incomplete. If no outcome data is publicly available, note this explicitly rather than silently omitting it."
 
 ### Step 2: Generate Differentiated Research Angles (DYNAMIC — do not use fixed categories)
 

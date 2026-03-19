@@ -43,6 +43,12 @@ Re-read the client call transcript, brief, and all source materials. Extract eve
 
 Client-raised concerns that go unaddressed in the deliverable are a credibility risk. The client will notice their own question was not answered. Even if the concern seems minor, it is safer to address it briefly than to ignore it.
 
+**Part C: Evidence-implied risks.**
+Review the research findings for risks, threats, or caveats that the client did not raise but that the evidence itself surfaces. For each:
+- Note the risk and the evidence that implies it
+- Assess whether the current storyline addresses it
+- If unaddressed, flag it for inclusion in the Considerations section of the report
+
 ### Step 4: Sanity-Check the Math
 For every quantitative claim:
 - Does the back-of-envelope math check out? (A 15% margin improvement on a $2B revenue base is $300M — does that magnitude make sense in context?)
@@ -123,6 +129,11 @@ Run through this checklist:
 | # | Client Concern | Source (where raised) | Addressed in Evidence? | Action Needed |
 |---|---------------|----------------------|----------------------|---------------|
 [Every concern, hesitation, or objection the client raised in the call, brief, or messages. For each: note whether the current evidence addresses it, and if not, what action is needed to address it in the synthesis/report.]
+
+## Evidence-Implied Risks
+| # | Risk | Evidence Source | Addressed in Storyline? | Action Needed |
+|---|------|----------------|------------------------|---------------|
+[Risks, threats, or caveats that the client did not raise but that the research findings themselves surface. For each: the risk, the evidence that implies it, whether the current storyline addresses it, and if not, what action is needed.]
 
 ## Math Checks
 [Results of back-of-envelope sanity checks on key numbers]

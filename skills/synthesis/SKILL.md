@@ -34,6 +34,8 @@ Before writing a single word, re-read the **Precision Anchor** from the problem-
 A governing message that operates at the wrong altitude will produce a report that sounds authoritative but doesn't actually help the client make their decision.
 
 ### Step 1: Start with the Answer
+Re-read the Deliverable Blueprint from the Precision Anchor. If the blueprint describes a document where the value is coverage and completeness, the governing message should frame what the coverage reveals, not force a single-action recommendation. The storyline structure should take the blueprint's structure as its starting point.
+
 Write the answer to the client question in one sentence. This is the governing message of the entire storyline. If you cannot write it in one sentence, the thinking is not sharp enough yet.
 
 Test the answer:
@@ -49,7 +51,7 @@ Distill the evidence into the 2-4 arguments that most powerfully support the ans
 - Connect directly to the governing message
 - Pass the "so what" test: if this argument were not true, would the answer change?
 
-Ruthlessly prioritize. If a finding is interesting but does not change the recommendation, it does not belong in the main storyline. It can go in an appendix.
+Ruthlessly prioritize against the Deliverable Blueprint. Findings that don't serve the blueprint's structure or coverage dimensions go in the appendix. Findings that fill a dimension the client needs belong in the main storyline even if they don't individually drive a single recommendation.
 
 ### Step 3: Stack the Evidence Under Each Argument
 For each argument, organize the supporting evidence:

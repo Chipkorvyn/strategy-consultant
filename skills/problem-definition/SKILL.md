@@ -47,6 +47,30 @@ Write the problem statement in this format:
 **Question**: [The specific, decision-oriented question this engagement will answer]
 **Scope**: [Boundaries — geography, time horizon, business unit, constraints]
 
+### Step 4.5: Envision the Best Possible Answer (MANDATORY)
+Before stress-testing the problem statement, concretely imagine what the client holds in their hands if this engagement succeeds perfectly. Write a Deliverable Blueprint:
+
+```
+DELIVERABLE BLUEPRINT (carry forward to all downstream phases)
+
+STRUCTURE: [How is the ideal document organized? Describe the sections
+and their logic — not "a comprehensive report" but the specific skeleton.]
+
+MUST CONTAIN: [What specific content must appear? Be concrete enough
+that you could check each item off a list.]
+
+COVERAGE DIMENSIONS: [What dimensions must the answer span completely?
+List them. These become the completeness standard for research and
+the report.]
+
+HOW THE CLIENT USES IT: [Will they make one decision and move on, or
+return to this document repeatedly? This determines whether the primary
+quality metric is argumentative tightness or coverage completeness.]
+
+```
+
+Present the blueprint to the user for confirmation alongside the problem statement.
+
 ### Step 5: Stress-Test It
 Before presenting the problem statement, run three quick checks:
 1. **The partner test**: If a senior partner read only the Question line, would they immediately understand what work needs to happen?
@@ -88,6 +112,7 @@ Scope: [Geography, time horizon, business unit, constraints]
 Success metric: [How we will know the answer is precise enough — e.g., "must quantify the revenue impact within ±20%" or "must compare at least 3 options with clear trade-offs"]
 What a precise answer looks like: [1 sentence describing what the output must contain to actually answer the question — not an adjacent or easier question]
 What a non-answer looks like: [1 sentence describing the most likely drift — the adjacent question the analysis might accidentally answer instead]
+Deliverable Blueprint: [Reference the full Deliverable Blueprint from Step 4.5 above]
 ```
 
 The Precision Anchor must be included in the research brief, passed to the validator, and re-checked at synthesis. Its purpose is to prevent analytical drift — the common failure mode where the team finds interesting data that answers a different (often easier) question than the one the client actually asked.

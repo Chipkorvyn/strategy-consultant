@@ -116,6 +116,8 @@ CLIENT CONCERNS & OBJECTIONS:
 
 During the writing phase, verify that each extracted point is either (a) incorporated into the report, (b) explicitly deprioritized with reasoning, or (c) flagged for the consultant. **Nothing from the source material should be silently dropped.**
 
+The Source Material Extraction Log is a first-class artifact — it travels with the Precision Anchor, the Client Question Checklist, and the Deliverable Blueprint through every downstream phase. Its purpose is visibility, not forced inclusion: downstream phases must be aware of what the client provided so they can make deliberate decisions about what to use, rather than losing material by accident.
+
 ### Step 1: Write the Research Brief
 Before dispatching agents, write a clear research brief that includes:
 - **The Precision Anchor** (from the problem-definition phase) — include it verbatim at the top of the brief. This is the reference against which all findings will be judged for relevance.
@@ -154,6 +156,8 @@ Before dispatching agents, analyze the Precision Anchor, hypothesis branches, an
 | "Should client acquire TargetCo?" | "TargetCo financials, growth trajectory, and asset valuation" | "Integration risks, cultural factors, and comparable M&A outcomes" |
 
 **Do NOT fall back to generic categories** like "market data vs. competitive dynamics" or "quantitative vs. qualitative." The angles must be specific to the question being researched.
+
+**Deliverable Blueprint check:** When the Precision Anchor includes a Deliverable Blueprint with Coverage Dimensions, ensure the two research angles together will cover all dimensions. If coverage dimensions include geographies or categories, at least one angle should be organized by that dimension rather than purely by topic.
 
 ### Step 3: Dispatch Agents in Parallel (BOTH agents required)
 Use the Agent tool to dispatch BOTH analyst agents simultaneously in the SAME message (this is critical — a single message with two Agent tool calls ensures true parallel execution). Pass each one:
@@ -205,6 +209,13 @@ For each sub-question, classify the evidence as:
 - **TOPIC MISS**: Evidence addresses a different topic entirely.
 
 Altitude mismatches are the most dangerous because they LOOK like answers. The data is relevant, the topic is right, and it's tempting to present it as responsive. But the client cannot use network totals to build a per-store archetype.
+
+**Coverage completeness check:** If the Precision Anchor includes a Deliverable Blueprint with Coverage Dimensions, check whether the evidence base has findings for each dimension. For each dimension unit (e.g., each country, each category, each functionality), classify as:
+* COVERED: At least one substantive finding with a sourced example
+* THIN: A finding exists but lacks specificity (e.g., a general statement about "Southeast Asia" rather than a specific competitor example in that market)
+* GAP: No evidence found for this dimension unit
+
+For THIN and GAP classifications, state what specific research would close it. Do not proceed past research without surfacing this to the user — a gap in a coverage dimension is equivalent to a partial answer.
 
 **When altitude mismatches are found:**
 1. Flag them explicitly in the research package as "ALTITUDE MISMATCH — [what we have] vs. [what was asked]"

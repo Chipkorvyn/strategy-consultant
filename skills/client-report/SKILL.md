@@ -183,10 +183,10 @@ A report that silently re-ranks expert-guided priorities based on public metrics
 this audit. The consultant — not the plugin — decides how to resolve strategic conflicts.
 
 **5f. "Data → So What → Now What" pattern check (MANDATORY):**
-For every sourced data point in the body, verify it is followed by:
+For sections where the Deliverable Blueprint indicates the client uses the content to make a decision, verify every sourced data point is followed by:
 1. **So what** — why this data point matters for the client's decision
 2. **Now what** — what the client should do about it (a specific action or recommendation)
-Data without an implication is incomplete. Data without a recommended action is an incomplete deliverable. If a data point exists only for context, it belongs in the appendix, not the body.
+For sections where the Deliverable Blueprint indicates the content serves as reference, "Data → So What" is sufficient — the value is the example itself and its relevance to the client's context, not a per-example action item. Data without at least an implication ("so what") is incomplete and belongs in the appendix, not the body.
 
 **5g. Cross-section linkage review (MANDATORY):**
 After drafting all sections, review the report as an integrated argument, not as independent answers:
@@ -222,6 +222,9 @@ For each expert finding, classify as:
 No expert-sourced finding may be silently dropped. Each must be either used, flagged,
 or explicitly deprioritized with reasoning. The consultant invested time and money to
 obtain expert data; the report should use it unless there is a documented reason not to.
+
+**5l. Source Material Awareness Check (MANDATORY):**
+Retrieve the Source Material Extraction Log from the research phase. Verify that the author of the report had visibility into every client-provided fact and data point. The purpose of this check is not to force inclusion — it is to ensure nothing was lost by accident. Flag any item from the extraction log that does not appear in the report and was not consciously considered during synthesis. The consultant decides what belongs; this check ensures the decision was made, not defaulted.
 
 **5j. Altitude audit:**
 For each section of the report, compare the data presented against the corresponding Precision Anchor sub-question. If the data is at a higher level of aggregation than what the client asked for, the section must include an explicit qualification: what the data shows, what the client asked for, and how to close the gap. A report that presents network totals as the answer to a per-store question — without flagging this — fails the altitude audit.

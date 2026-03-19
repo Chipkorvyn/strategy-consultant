@@ -41,6 +41,8 @@ Before launching research, ask the user about available data sources using the *
 Record all answers and carry them into the research brief.
 
 ### Phase 3: Research
+Include the Deliverable Blueprint from the Precision Anchor in the brief/input for this phase.
+
 Invoke the **research** skill. This dispatches three agents:
 1. **analyst-alpha**: Direct research angle (market data, financials, industry benchmarks)
 2. **analyst-bravo**: Complementary angle (competitive dynamics, case studies, contrarian evidence)
@@ -81,6 +83,8 @@ Present the sense-check report to the user (Checkpoint 3).
 COMMON FAILURE MODE: The agent reads the sense-check skill but decides the research is "strong enough" and skips producing the actual report. This defeats the purpose. The discipline of writing each section forces rigor that mental shortcuts do not provide. Always produce the written report.
 
 ### Phase 5: Synthesize (MANDATORY — produces a written storyline)
+Include the Deliverable Blueprint from the Precision Anchor in the brief/input for this phase.
+
 Invoke the **synthesis** skill. This step transforms the evidence into an argument. It is NOT the same as organizing findings by topic — it answers the question "so what should the client do?"
 
 The synthesis skill must produce a written Storyline Document containing:
@@ -96,6 +100,8 @@ Present the storyline to the user (Checkpoint 4).
 COMMON FAILURE MODE: The agent skips synthesis and goes directly from research to the report, organizing findings by topic rather than by argument. The result is a summary, not a synthesis. The test: if you remove all the evidence and read only the headlines, does a decision-oriented argument emerge? If not, the synthesis step was skipped.
 
 ### Phase 6: Deliver (MANDATORY — invokes client-report skill)
+Include the Deliverable Blueprint from the Precision Anchor in the brief/input for this phase.
+
 Invoke the **client-report** skill to produce the final .docx. Do NOT write the document directly using the docx skill alone — the client-report skill contains writing standards, banned words, structure requirements, and a mandatory quality review process that must be followed.
 
 The report MUST include:
@@ -123,7 +129,7 @@ Present the final document to the user.
 The following checkpoints require presenting output to the user and waiting for their response before proceeding. These are not optional efficiency trade-offs — they are quality gates that catch errors, incorporate user knowledge, and prevent wasted work.
 
 **CHECKPOINT 1 — Problem Statement (Phase 1)**
-Present the problem statement, Precision Anchor, AND the Client Question Checklist. Wait for user confirmation.
+Present the problem statement, Precision Anchor (including the Deliverable Blueprint), AND the Client Question Checklist. Wait for user confirmation.
 DO NOT proceed to research until the user confirms.
 
 **CHECKPOINT 2 — Research Package (Phase 3)**
@@ -151,7 +157,7 @@ DO NOT proceed to the report until the user approves the storyline.
 
 **Let the user drive pace.** Present output at each phase and wait for confirmation before proceeding. The user may want to inject additional context, redirect the analysis, or skip phases.
 
-**Never pad.** Every sentence in every output must earn its place. If a finding does not change the recommendation, it goes in the appendix or gets cut.
+**Never pad.** Every sentence in every output must earn its place against the Deliverable Blueprint. What counts as earning its place depends on what the client needs: driving a recommendation, filling a coverage dimension, providing a reference example the client will return to.
 
 ## Quick Reference — Skill Sequence
 ```

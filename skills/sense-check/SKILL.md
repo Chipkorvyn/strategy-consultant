@@ -72,6 +72,8 @@ Do NOT let altitude mismatches pass as precise answers. A consultant who present
 
 **If the data doesn't match the question**: This is NOT a reason to answer a different question. Instead, the sense-check must flag: (a) what the available data can answer, (b) the gap between that and what the client asked, and (c) a clear recommendation for how to close the gap (additional research, client data, expert interviews). If the gap cannot be closed, the conclusion must include an explicit qualification.
 
+**Coverage completeness check:** If the Precision Anchor includes a Deliverable Blueprint with Coverage Dimensions, produce a Coverage Matrix that maps every dimension the client asked for against the evidence base. The matrix should make gaps immediately visible. Any dimension classified as GAP downgrades the overall verdict to PARTIAL at best — you cannot call an answer PRECISE if entire dimensions the client asked for are missing.
+
 **Verdict**: [The emerging conclusion PRECISELY answers the Precision Anchor question / The conclusion PARTIALLY answers it — specify the gap / The analysis has DRIFTED — specify to what question]
 
 If the verdict is DRIFTED, recommend looping back to targeted research before proceeding to synthesis. Do not let a drifted analysis pass this gate.
@@ -106,6 +108,10 @@ Run through this checklist:
 ## Claim-by-Claim Assessment
 | Claim | Evidence Strength | Triangulated? | Counter-Argument | Verdict |
 |-------|------------------|--------------|-----------------|---------|
+
+## Coverage Matrix (if Deliverable Blueprint has Coverage Dimensions)
+| Dimension Unit | Status (COVERED / THIN / GAP) | Notes |
+|----------------|-------------------------------|-------|
 
 ## Key Vulnerabilities
 [The 2-3 weakest points in the argument — where a skeptical partner or client would push back]

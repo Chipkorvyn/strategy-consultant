@@ -122,7 +122,35 @@ The client-report quality review MUST include all mandatory checks (5a through 5
 
 COMMON FAILURE MODE: The agent bypasses the client-report skill and writes the document directly, producing a well-formatted document that lacks the Research Notes section, the counter-argument section, and the quality review. The client-report skill is not just about formatting — it enforces analytical rigor in the final deliverable.
 
-Present the final document to the user.
+### Phase 6.5: Deliverable Validation (MANDATORY — no agent audits its own output)
+The agent that wrote the report cannot objectively audit it. Dispatch a separate validation agent to read the generated .docx alongside the upstream artifacts and produce a gap report.
+
+**Why this exists:** The client-report skill specifies mandatory quality checks (5a–5k), but when the same agent that wrote the report also runs the checks, it has sunk-cost bias toward what it already produced. The research phase already solves this problem — two analysts write, a separate validator checks. This phase extends that pattern to delivery.
+
+**Process:**
+1. Dispatch the **research-validator** agent (or a general-purpose agent) with the following inputs:
+   - The generated .docx file path
+   - The validated research file (`research-validated.md`) — specifically the Research Notes / Source Registry section
+   - The sense-check report
+   - The synthesis storyline (governing message, headline sequence, evidence map)
+   - The Precision Anchor and Client Question Checklist from problem definition
+
+2. The validator agent must check:
+   - **Source completeness**: Count source entries in the research-validated file's Research Notes / Source Registry. Count source entries in the .docx. Flag any gap. Every validated source must appear in the final document.
+   - **Counter-argument coverage**: Verify the steel-man counter-narrative, client-raised objections, and operational risks from the sense-check all appear in the document.
+   - **Client Question Checklist**: Every question answered or explicitly acknowledged as out-of-scope.
+   - **Headline fidelity**: The synthesis headline sequence should be traceable in the document's section structure.
+   - **Banned language**: Scan for any banned words/phrases from the client-report skill.
+
+3. The validator produces a **Deliverable Gap Report**:
+   - PASS: No gaps found. Document is ready for delivery.
+   - FAIL: List each gap with the specific missing item and where it should appear.
+
+4. If FAIL: fix the gaps in the document before presenting to the user. Then re-run the validator to confirm.
+
+COMMON FAILURE MODE: The agent decides the report "looks good enough" and skips this phase. This is the phase that would have caught the most common delivery failure — omitted Research Notes, missing sources, dropped client questions. It adds one agent call. Do not skip it.
+
+Present the final validated document to the user.
 
 ## Mandatory User Checkpoints (NON-NEGOTIABLE)
 
@@ -161,6 +189,6 @@ DO NOT proceed to the report until the user approves the storyline.
 
 ## Quick Reference — Skill Sequence
 ```
-problem-definition → [hypothesis-tree] → data-source-inquiry → research → [expert-interview] → sense-check → synthesis → client-report
-                      (optional)          (AskUserQuestion)     (3 agents)   (if interviews available)
+problem-definition → [hypothesis-tree] → data-source-inquiry → research → [expert-interview] → sense-check → synthesis → client-report → deliverable-validation
+                      (optional)          (AskUserQuestion)     (3 agents)   (if interviews available)                                      (separate agent)
 ```

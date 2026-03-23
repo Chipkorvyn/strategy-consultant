@@ -1,6 +1,6 @@
-# Strategy Consultant
+# Strategy Consultant (a.k.a. Worker)
 
-A Cowork plugin that performs the analytical work of a strategy consultant. Takes a business problem from definition through research, validation, synthesis, and delivers an executive-grade client report.
+A Cowork plugin that performs the analytical work of a strategy consultant or any knowledge worker. Takes a business problem from definition through research, validation, synthesis, and delivers an executive-grade deliverable.
 
 ## Who It's For
 
@@ -8,6 +8,7 @@ A Cowork plugin that performs the analytical work of a strategy consultant. Take
 - **Corporate Strategy Teams** — In-house strategists running internal engagements for C-suite
 - **Corporate Development / M&A** — Teams scoping market entries, acquisitions, and competitive landscapes
 - **Independent Advisors / Boutique Firms** — Solo or small-team consultants who need the analytical horsepower of a larger team
+- **Any knowledge work** - Any work that requires similar skill
 
 ## How It Works
 

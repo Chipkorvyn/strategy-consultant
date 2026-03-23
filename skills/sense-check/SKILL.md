@@ -84,6 +84,16 @@ Do NOT let altitude mismatches pass as precise answers. A consultant who present
 
 If the verdict is DRIFTED, recommend looping back to targeted research before proceeding to synthesis. Do not let a drifted analysis pass this gate.
 
+### Step 5.5: Value-Add Completeness Check
+
+The preceding steps ensure the analysis precisely answers the question. This step checks whether the deliverable stops at precision when it should go further.
+
+Review the full research base and ask: **"Is there anything the research uncovered that a knowledgeable practitioner would expect to see in a deliverable on this topic — even though the client didn't ask for it?"**
+
+This is not about padding the report. Clients often don't know what to ask for, and part of a consultant's value is surfacing what they need to know beyond what they asked.
+
+Scan the validated findings, expert extractions, and any [ADJACENT] findings. For each, ask: would omitting this leave the client materially less equipped to act? If yes, flag it for inclusion as a value-add section in synthesis.
+
 ### Step 6: Check for Analytical Traps
 Run through this checklist:
 
@@ -134,6 +144,9 @@ Run through this checklist:
 | # | Risk | Evidence Source | Addressed in Storyline? | Action Needed |
 |---|------|----------------|------------------------|---------------|
 [Risks, threats, or caveats that the client did not raise but that the research findings themselves surface. For each: the risk, the evidence that implies it, whether the current storyline addresses it, and if not, what action is needed.]
+
+## Value-Add Opportunities
+[High-value findings from the research base that go beyond the Precision Anchor but would materially elevate the deliverable. For each: the finding, why it matters to the client, and whether the current storyline would include or filter it out.]
 
 ## Math Checks
 [Results of back-of-envelope sanity checks on key numbers]

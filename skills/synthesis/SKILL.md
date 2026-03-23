@@ -51,7 +51,21 @@ Distill the evidence into the 2-4 arguments that most powerfully support the ans
 - Connect directly to the governing message
 - Pass the "so what" test: if this argument were not true, would the answer change?
 
-Ruthlessly prioritize against the Deliverable Blueprint. Findings that don't serve the blueprint's structure or coverage dimensions go in the appendix. Findings that fill a dimension the client needs belong in the main storyline even if they don't individually drive a single recommendation.
+Prioritize against the Deliverable Blueprint. Findings that fill a dimension the client needs belong in the main storyline even if they don't individually drive a single recommendation. Findings that don't serve the blueprint's structure go to the Value-Add Review (Step 2.5) before being sent to the appendix — some may deserve their own section.
+
+### Step 2.5: Value-Add Review
+
+The precision architecture (Steps 0-2) ensures the client's question gets answered. This step ensures the deliverable doesn't stop there.
+
+Review the full research base — analyst memos, validated findings, expert interview extractions — for insights that fall outside the Precision Anchor but would materially elevate the deliverable.
+
+**The test for inclusion**: Would the client, after reading the deliverable, say "I'm glad they included this even though I didn't ask for it"? If yes, it belongs in the report as a supplementary section, not in the appendix.
+
+**What to look for**: Do not prescribe specific categories — the research itself reveals what is valuable. Scan the full research base (including [ADJACENT] findings from the validator, expert content that didn't map to a sub-question, and deprioritized research threads) and ask: "Is there anything here that a knowledgeable practitioner would consider important context, even though the client didn't specifically request it?"
+
+**How to include it**: Value-add sections sit after the core arguments but before the counter-arguments. Label them to signal supplementary value (e.g., "Practical Considerations," "Implementation Context," "Additional Capabilities"). Each section earns its place by being directly useful, not by being comprehensive.
+
+**What still goes to the appendix**: Findings that are intellectually interesting but not practically useful. The distinction is client utility.
 
 ### Step 3: Stack the Evidence Under Each Argument
 For each argument, organize the supporting evidence:
@@ -180,6 +194,9 @@ Key data point: [the anchor number or fact]
 ### Addressing the Counter-Argument
 [The objection, why the evidence still supports the recommendation, and the mitigation plan]
 
+### Value-Add Sections (if any)
+[Insights from the research base that go beyond the Precision Anchor but materially elevate the deliverable. For each: the insight, why it's valuable, and supporting evidence.]
+
 ## Headline Sequence (read-through test)
 1. [Headline 1]
 2. [Headline 2]
@@ -194,7 +211,7 @@ Key data point: [the anchor number or fact]
 |----------|-------------|--------|----------|
 
 ## Appendix Candidates
-[Findings that are interesting but do not drive the main storyline — available if the client asks]
+[Findings that passed the Value-Add Review without qualifying — available if the client asks]
 ```
 
 Present the synthesis to the user. This is the blueprint that the client-report skill will turn into a polished deliverable.

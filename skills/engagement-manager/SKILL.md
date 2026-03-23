@@ -162,7 +162,7 @@ The agent that wrote the report cannot objectively audit it. Dispatch a separate
    - The Precision Anchor and Client Question Checklist from problem definition
 
 2. The validator agent must check:
-   - **Source completeness**: Count source entries in the research-validated file's Research Notes / Source Registry. Count source entries in the .docx. Flag any gap. Every validated source must appear in the final document.
+   - **Source completeness (AUTOMATIC FAIL if counts diverge)**: Extract the .docx text (via pandoc or equivalent). Count entries matching `[N]` in the research-validated file's Source Registry section. Count entries matching `[N]` in the extracted .docx text. Report both numbers explicitly: "Source Registry: {X} entries. Report Research Notes: {Y} entries." If X ≠ Y, the report FAILS — do not evaluate other checks. The most common failure is a prose summary replacing the numbered list; if the .docx Research Notes section contains zero `[N]` entries, flag immediately.
    - **Counter-argument coverage**: Verify the steel-man counter-narrative, client-raised objections, and operational risks from the sense-check all appear in the document.
    - **Client Question Checklist**: Every question answered or explicitly acknowledged as out-of-scope.
    - **Headline fidelity**: The synthesis headline sequence should be traceable in the document's section structure.

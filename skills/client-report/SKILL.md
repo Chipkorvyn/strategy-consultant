@@ -214,8 +214,12 @@ Retrieve the Client Question Checklist from the problem-definition phase. For ea
 - [ ] If a question was deprioritized, verify the report acknowledges this with reasoning
 - **No client question may go unanswered without acknowledgment.** The client will notice if their specific request was ignored.
 
-**5i. Research Notes completeness check:**
-Verify that every data point, number, and factual claim in the report body has a matching entry in the Research Notes section. If any data point in the body is missing from Research Notes, either add it (with source) or remove the unsourced claim from the body.
+**5i. Research Notes completeness check (HARD GATE — report fails if this does not pass):**
+This check is binary. Open the validated research file and count every numbered entry matching the pattern `[N]` in the Research Notes / Source Registry section. That is the expected count. Then count the numbered entries `[N]` in the report's Research Notes section. If the counts do not match, the report FAILS and must be revised before .docx generation.
+
+The Research Notes section must contain the **individual numbered source entries from the validated research**, not a prose summary of them. Each entry must include: the quoted data point, source name, URL (or "[URL NOT AVAILABLE]"), CS score, and verification status — exactly as the validator produced them. "Include verbatim" means transcribe, not summarize.
+
+COMMON FAILURE MODE: When the report is generated programmatically (e.g., via docx-js), the agent avoids encoding dozens of source entries as string literals and instead writes a summary paragraph. This is not acceptable. If the source list is long, read the validated research file at generation time and iterate over entries programmatically — do not hand-code each entry as a literal.
 
 **5k. Expert-sourced content retention check (MANDATORY when expert interviews were
 processed):**

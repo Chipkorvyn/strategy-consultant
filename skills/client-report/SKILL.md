@@ -221,7 +221,7 @@ The Research Notes section must contain the **individual numbered source entries
 
 COMMON FAILURE MODE: When the report is generated programmatically (e.g., via docx-js), the agent avoids encoding dozens of source entries as string literals and instead writes a summary paragraph. This is not acceptable. If the source list is long, read the validated research file at generation time and iterate over entries programmatically — do not hand-code each entry as a literal.
 
-**5k. Expert-sourced content retention check (MANDATORY when expert interviews were
+**5j. Expert-sourced content retention check (MANDATORY when expert interviews were
 processed):**
 If the expert-interview skill produced an Expert Interview Output with Key Findings,
 cross-reference every finding marked as FACT or CS-2 against the report body.
@@ -240,10 +240,10 @@ No expert-sourced finding may be silently dropped. Each must be either used, fla
 or explicitly deprioritized with reasoning. The consultant invested time and money to
 obtain expert data; the report should use it unless there is a documented reason not to.
 
-**5l. Source Material Awareness Check (MANDATORY):**
+**5k. Source Material Awareness Check (MANDATORY):**
 Retrieve the Source Material Extraction Log from the research phase. Verify that the author of the report had visibility into every client-provided fact and data point. The purpose of this check is not to force inclusion — it is to ensure nothing was lost by accident. Flag any item from the extraction log that does not appear in the report and was not consciously considered during synthesis. The consultant decides what belongs; this check ensures the decision was made, not defaulted.
 
-**5j. Altitude audit:**
+**5l. Altitude audit:**
 For each section of the report, compare the data presented against the corresponding Precision Anchor sub-question. If the data is at a higher level of aggregation than what the client asked for, the section must include an explicit qualification: what the data shows, what the client asked for, and how to close the gap. A report that presents network totals as the answer to a per-store question — without flagging this — fails the altitude audit.
 
 ### Step 6: Produce the .docx

@@ -159,6 +159,7 @@ Before dispatching agents, write a clear research brief that includes:
 - **Relevance instruction to analysts**: "Your findings must directly address the question in the Precision Anchor. If your research leads to findings that are interesting but address an adjacent or different question, place them in a separate 'Adjacent Findings' section and explain how they relate (or don't) to the original question. Do not let adjacent findings displace direct answers."
 - **Industry terminology instruction to analysts**: "As part of your research, identify and collect the standard industry-specific terminology, jargon, and technical vocabulary used by practitioners in this domain. Record these terms with brief definitions in a dedicated 'Industry Terminology' section of your output. These terms will be used in the report alongside plain-language explanations."
 - **Outcome data instruction to analysts**: "For every competitor or case study example, capture both the mechanism (what they do) and the measurable outcome (what results it produced — revenue, conversion, adoption rate, cost reduction, engagement metrics). A competitor example without a quantified outcome is incomplete. If no outcome data is publicly available, note this explicitly rather than silently omitting it."
+- **Source traceability instruction to analysts**: "Every factual claim must include: (a) the source name, (b) a working URL or the marker [NO URL]. When you derive an estimate from adjacent data, label it [ESTIMATE] and state the source and bridging assumption in one sentence. Never present an estimate with the same confidence framing as a directly sourced fact."
 
 ### Step 2: Generate Differentiated Research Angles (DYNAMIC — do not use fixed categories)
 
@@ -240,10 +241,10 @@ After the validator completes, present the user with:
 
 3. **An explicit question to the user**: "I've identified [N] sub-dimensions that could benefit from deeper research. Would you like me to dispatch a third research agent to investigate these specifically? This will add depth but also time to the engagement."
 
-**If the user confirms**, dispatch a third analyst agent (use the general-purpose agent type) with:
+**If the user confirms**, dispatch the **analyst-deep** agent with:
 - The validated findings from research-alpha.md and research-bravo.md
 - The specific sub-dimensions identified above as the research brief
-- Instructions: "You are a deep-dive analyst. The first two research passes covered the main territory. Your job is to go one level deeper on these specific sub-dimensions: [list]. For each sub-dimension, find the specific detail, quantify where possible, name the specific actors/systems/processes involved, and cite the source. Write findings to research-deep.md"
+- Instructions: "Investigate these specific sub-dimensions: [list]. Write findings to research-deep.md"
 
 **After the deep agent completes**, re-dispatch the validator to cross-check all THREE research files (research-alpha.md, research-bravo.md, research-deep.md) and produce an updated research-validated.md.
 

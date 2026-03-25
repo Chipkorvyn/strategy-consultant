@@ -28,7 +28,7 @@ If used, present the hypothesis tree to the user and get confirmation on researc
 ### Phase 2.5: Data Source Inquiry (MANDATORY — three required questions)
 Before launching research, ask the user about available data sources using the **AskUserQuestion** tool. This step determines the research tier mix and shapes the entire research strategy.
 
-**The following three questions are REQUIRED and must each appear as a separate, clearly worded question in the AskUserQuestion call. You may add additional context-specific questions (e.g., geography focus, deliverable format), but these three must not be omitted, merged, or rephrased beyond recognition:**
+**The following three questions are REQUIRED and must each appear as a separate, clearly worded question in the AskUserQuestion call. You may add additional context-specific questions (e.g., geography focus, deliverable format), but these three must not be omitted, merged, or rephrased beyond recognition. The AskUserQuestion tool accepts a maximum of 4 questions per call — if you need more than one additional question beyond the three required, use a second call.**
 
 1. **Internal/client data** (REQUIRED): Based on the problem statement, suggest 2-3 specific types of internal data that would be most valuable for THIS question and ask whether they are available. Examples: internal strategy documents, store layouts, financial models, operational metrics, customer data. Tailor the examples to the specific engagement — do not use generic placeholders.
 
@@ -36,7 +36,7 @@ Before launching research, ask the user about available data sources using the *
 
 3. **Other external reference material** (REQUIRED): Ask: "Do you have any other reference material that should inform this research — for example, an industry report, market study, competitor analysis, or third-party dataset?" This captures data sources that are neither internal client data nor expert interviews but still provide valuable context beyond what public web research can find.
 
-**Why these three questions matter:** Each question covers a distinct data tier that follows a different processing path. Internal data (Q1) is analyzed alongside public research in Phase 3. Expert interviews (Q2) activate Phase 3.5 and the expert-interview skill for claim extraction and CS scoring. Other reference material (Q3) feeds into the research brief as supplementary context for the analysts. Together, the answers determine whether the engagement runs as Scenario A (public only), Scenario C (internal + public), Scenario D (public + expert), or Scenario E (all sources).
+**Why these three questions matter:** Each question covers a distinct data tier that follows a different processing path. Internal data (Q1) is analyzed alongside public research in Phase 3. Expert interviews (Q2) activate Phase 3.5 and the expert-interview skill for claim extraction and CS scoring. Other reference material (Q3) feeds into the research brief as supplementary context for the analysts. Together, the answers determine whether the engagement runs as Scenario A (public only), B (internal data only), C (internal + public), D (public + expert), or E (all sources).
 
 Record all answers and carry them into the research brief.
 
@@ -54,6 +54,8 @@ After the Data Source Inquiry, use the **AskUserQuestion** tool to confirm the d
 - **Excel** — Structured spreadsheet. Best when the deliverable must map findings across many dimension intersections.
 - **PowerPoint** — Slide-based deliverable for presenting to stakeholders.
 
+If the user requests a format not listed above, confirm that you can produce it and adapt the delivery phase accordingly.
+
 **Carry the format choice forward** to the synthesis phase and the client-report/delivery phase. The Deliverable Blueprint from problem-definition should be updated to reflect the confirmed format.
 
 ### Phase 3: Research
@@ -67,8 +69,6 @@ Invoke the **research** skill. This dispatches three agents:
 The research brief must include the data availability summary from Phase 2.5. If internal data was provided, analyze it alongside public research. If the user indicated expert interviews are planned, identify the key uncertainties where expert input would be most valuable.
 
 After the validator completes, the research skill will present an executive summary and a Deep Research assessment identifying under-explored sub-dimensions. The user can choose to dispatch a third "deep dive" agent targeting those specific gaps, or proceed with the existing research base.
-
-After the user has either completed or declined the deep research pass, ask if they have additional data or context to contribute before proceeding.
 
 ### Phase 3.5: Expert Interviews (if indicated in Phase 2.5)
 If the user indicated during the Data Source Inquiry that expert interviews would be available, invoke the **expert-interview** skill. This phase comes AFTER public research because:
@@ -137,7 +137,7 @@ The report MUST include:
 - Specific recommendations — every sourced data point must lead to an actionable recommendation
 - Research Notes section (MANDATORY — final section, compiled from the validator's source registry, providing full traceability for every data point in the report)
 
-The client-report quality review MUST include all mandatory checks (5a through 5j), including:
+The client-report quality review MUST include all mandatory checks (5a through 5l), including:
 - Citation completeness self-audit (no uncited claims)
 - Assumption labeling audit (illustrative vs. sourced numbers clearly distinguished)
 - Source-type-aware confidence language audit
@@ -188,9 +188,7 @@ DO NOT proceed to research until the user confirms.
 
 **CHECKPOINT 2 — Research Package (Phase 3)**
 After the validator completes, present the validated research package to the user. Include: key findings summary, evidence strength assessment, and information gaps.
-Ask: "Do you have additional data, context, or expert interviews to contribute before I proceed to analysis?"
 DO NOT proceed to sense-check until the user responds.
-WHY THIS MATTERS: The user may have expert transcripts, internal data, or corrections that change the research base. Skipping this checkpoint means the entire downstream analysis may be built on an incomplete evidence base.
 
 **CHECKPOINT 3 — Sense-Check Report (Phase 4)**
 Produce the full sense-check report (claim inventory, triangulation, steel-man, math checks, precision verdict). Present to the user.
@@ -200,8 +198,6 @@ DO NOT proceed to synthesis until the user has seen the sense-check results.
 Present the synthesis output (governing message, headline sequence, evidence map) to the user.
 Ask: "Does this storyline answer your question? Any adjustments before I write the report?"
 DO NOT proceed to the report until the user approves the storyline.
-
-**Speed vs. quality trade-off:** If the user explicitly asks to "skip the checkpoints" or "just produce the report fast," you may compress checkpoints 2-4 into a single summary. But the default is always to pause at each gate.
 
 ## Key Principles Throughout
 

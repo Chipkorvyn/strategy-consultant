@@ -116,6 +116,7 @@ PRECISION ANCHOR (carry forward to all downstream phases)
 Question: [The exact decision-oriented question — copied verbatim from the problem statement]
 Decision: [What specific decision this will inform]
 Scope: [Geography, time horizon, business unit, constraints]
+Target entity: [When the client's request references a specific type of offering, capability, or business function (e.g., "DaaS platform," "managed services," "supply chain solution"), state your working definition in one sentence — what it is, and what adjacent offering at the same companies it is not. This travels with the Precision Anchor and governs what the research agents profile. The client confirms or corrects by exception when reviewing the problem statement.]
 Success metric: [How we will know the answer is precise enough — e.g., "must quantify the revenue impact within ±20%" or "must compare at least 3 options with clear trade-offs"]
 What a precise answer looks like: [1 sentence describing what the output must contain to actually answer the question — not an adjacent or easier question]
 What a non-answer looks like: [1 sentence describing the most likely drift — the adjacent question the analysis might accidentally answer instead]

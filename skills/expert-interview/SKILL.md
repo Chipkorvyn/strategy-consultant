@@ -1,7 +1,7 @@
 ---
 name: expert-interview
 description: >
-  Plan, guide, and process expert interviews to confirm and enhance research findings. Use when someone asks to "prepare for expert interviews", "create an interview guide", "who should we interview", "process interview notes", "extract insights from interviews", or when the analytical workflow includes expert interviews after the research phase. Also trigger when someone uploads expert interview transcripts or notes that need to be analyzed and integrated into the research base.
+  Internal phase of the strategy-consultant engagement — invoke via engagement-manager, not directly. Plan, guide, and process expert interviews to confirm and enhance research findings. Use when someone asks to "prepare for expert interviews", "create an interview guide", "who should we interview", "process interview notes", "extract insights from interviews", or when the analytical workflow includes expert interviews after the research phase. Also trigger when someone uploads expert interview transcripts or notes that need to be analyzed and integrated into the research base.
 ---
 
 # Expert Interview — Confirm, Enhance, and Challenge Research Findings

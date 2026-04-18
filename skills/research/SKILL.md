@@ -1,7 +1,7 @@
 ---
 name: research
 description: >
-  Conduct thorough, multi-tier research on a client question by dispatching two independent research agents and a validation agent. Use when someone asks to "research this topic", "find evidence for", "investigate this market", "gather data on", "what does the evidence say about", or when the analytical workflow reaches the research phase after problem definition. Also trigger when someone uploads client data or expert interview notes that need to be analyzed alongside public research.
+  Internal phase of the strategy-consultant engagement — invoke via engagement-manager, not directly. Conduct thorough, multi-tier research on a client question by dispatching two independent research agents and a validation agent. Use when someone asks to "research this topic", "find evidence for", "investigate this market", "gather data on", "what does the evidence say about", or when the analytical workflow reaches the research phase after problem definition. Also trigger when someone uploads client data or expert interview notes that need to be analyzed alongside public research.
 ---
 
 # Research — Parallel Investigation with Validation

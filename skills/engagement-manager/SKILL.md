@@ -11,14 +11,34 @@ Orchestrate a complete consulting-grade analytical engagement. This skill coordi
 ## Operating Mode
 Delivery only. Produce results directly. Flag weak logic inline rather than asking Socratic questions. The user wants outputs, not coaching.
 
+## Workspace convention
+
+This skill is the singular entry point to the plugin. Sub-commands (`/research`, `/define-problem`, `/interview-guide`) are continuation-only and check for the workspace described here before proceeding.
+
+On first invocation of `/engagement`, create `./engagement/` at the root of the current working directory. This folder is the persistent home of the engagement across phases. At a minimum it must contain:
+
+- `precision-anchor.md` — the Precision Anchor (question, decision, scope, success metric, what precise vs. non-answer looks like), produced in Phase 1.
+- `client-question-checklist.md` — every explicit question extracted from the source materials, produced in Phase 1.
+- `source-material-extraction-log.md` — the systematic extraction of every factual claim, data point, named example, and question from user-provided documents, produced in Phase 1.
+- `step0-answers.md` — the three data-source-inquiry answers from Phase 2.5 plus the deliverable-format answer from Phase 2.7.
+- Per-phase outputs: `hypothesis-tree.md` (if used), `research-brief.md`, `research-validated.md`, `expert-interview-notes.md` (if used), `sense-check.md`, `storyline.md`, and the final deliverable (`.docx` / `.xlsx` / `.pptx`).
+
+Sub-commands use the existence of `./engagement/precision-anchor.md` as their continuation test. If the workspace is present, the sub-command continues from its phase. If it is absent, the sub-command stops and routes control back to `/engagement`, which will route to the correct starting phase.
+
+Do not scatter phase outputs across the user's working directory, and do not create a fresh workspace inside a sub-command — that rebuilds the orchestrator piecemeal.
+
 ## Workflow
 
 ### Phase 1: Define the Problem
+Invoke the skill. Its internal gates are authoritative — do not bypass.
+
 Invoke the **problem-definition** skill. Work with the user to sharpen their business question into a decision-oriented problem statement with clear scope and boundaries.
 
 Do not proceed until the user confirms the problem statement.
 
 ### Phase 2: Structure Hypotheses (Optional)
+Invoke the skill. Its internal gates are authoritative — do not bypass.
+
 Assess whether the problem benefits from a formal hypothesis tree:
 - If the question has multiple plausible answers and research needs prioritization → invoke the **hypothesis-tree** skill
 - If the question is narrow enough for direct research → skip to Phase 3
@@ -26,6 +46,8 @@ Assess whether the problem benefits from a formal hypothesis tree:
 If used, present the hypothesis tree to the user and get confirmation on research priorities before proceeding.
 
 ### Phase 2.5: Data Source Inquiry (MANDATORY — three required questions)
+Invoke the skill. Its internal gates are authoritative — do not bypass.
+
 Before launching research, ask the user about available data sources using the **AskUserQuestion** tool. This step determines the research tier mix and shapes the entire research strategy.
 
 **The following three questions are REQUIRED and must each appear as a separate, clearly worded question in the AskUserQuestion call. You may add additional context-specific questions (e.g., geography focus, deliverable format), but these three must not be omitted, merged, or rephrased beyond recognition. The AskUserQuestion tool accepts a maximum of 4 questions per call — if you need more than one additional question beyond the three required, use a second call.**
@@ -41,6 +63,7 @@ Before launching research, ask the user about available data sources using the *
 Record all answers and carry them into the research brief.
 
 ### Phase 2.7: Deliverable Format Confirmation (MANDATORY)
+Invoke the skill. Its internal gates are authoritative — do not bypass.
 
 After the Data Source Inquiry, use the **AskUserQuestion** tool to confirm the deliverable format. This question must be asked BEFORE research begins so the synthesis and delivery phases know what to produce.
 
@@ -59,6 +82,8 @@ If the user requests a format not listed above, confirm that you can produce it 
 **Carry the format choice forward** to the synthesis phase and the client-report/delivery phase. The Deliverable Blueprint from problem-definition should be updated to reflect the confirmed format.
 
 ### Phase 3: Research
+Invoke the skill. Its internal gates are authoritative — do not bypass.
+
 Include the Deliverable Blueprint from the Precision Anchor in the brief/input for this phase.
 
 Invoke the **research** skill. This dispatches three agents:
@@ -71,6 +96,8 @@ The research brief must include the data availability summary from Phase 2.5. If
 After the validator completes, the research skill will present an executive summary and a Deep Research assessment identifying under-explored sub-dimensions. The user can choose to dispatch a third "deep dive" agent targeting those specific gaps, or proceed with the existing research base.
 
 ### Phase 3.5: Expert Interviews (if indicated in Phase 2.5)
+Invoke the skill. Its internal gates are authoritative — do not bypass.
+
 If the user indicated during the Data Source Inquiry that expert interviews would be available, invoke the **expert-interview** skill. This phase comes AFTER public research because:
 - Interview guides are sharper when informed by what the public data already shows
 - Questions can target the specific gaps and uncertainties identified during research
@@ -85,6 +112,8 @@ If the user indicated during the Data Source Inquiry that expert interviews woul
 If expert interviews reveal significant conflicts with public research or surface entirely new information, consider a targeted follow-up research pass before proceeding to sense-check.
 
 ### Phase 4: Sense-Check (MANDATORY — produces a written report)
+Invoke the skill. Its internal gates are authoritative — do not bypass.
+
 Invoke the **sense-check** skill. This is NOT optional and cannot be replaced with an informal assessment. The sense-check skill prescribes a 7-step process that must produce a written Sense-Check Report containing:
 - Claim-by-claim assessment table
 - Key vulnerabilities
@@ -101,6 +130,8 @@ Present the sense-check report to the user (Checkpoint 3).
 COMMON FAILURE MODE: The agent reads the sense-check skill but decides the research is "strong enough" and skips producing the actual report. This defeats the purpose. The discipline of writing each section forces rigor that mental shortcuts do not provide. Always produce the written report.
 
 ### Phase 5: Synthesize (MANDATORY — produces a written storyline)
+Invoke the skill. Its internal gates are authoritative — do not bypass.
+
 Include the Deliverable Blueprint from the Precision Anchor in the brief/input for this phase.
 
 Invoke the **synthesis** skill. This step transforms the evidence into an argument. It is NOT the same as organizing findings by topic — it answers the question "so what should the client do?"
@@ -118,6 +149,8 @@ Present the storyline to the user (Checkpoint 4).
 COMMON FAILURE MODE: The agent skips synthesis and goes directly from research to the report, organizing findings by topic rather than by argument. The result is a summary, not a synthesis. The test: if you remove all the evidence and read only the headlines, does a decision-oriented argument emerge? If not, the synthesis step was skipped.
 
 ### Phase 6: Deliver (MANDATORY)
+Invoke the skill. Its internal gates are authoritative — do not bypass.
+
 Include the Deliverable Blueprint from the Precision Anchor in the brief/input for this phase, along with the confirmed deliverable format from Phase 2.7.
 
 **Format-specific delivery:**
@@ -149,6 +182,8 @@ The client-report quality review MUST include all mandatory checks (5a through 5
 COMMON FAILURE MODE: The agent bypasses the client-report skill and writes the document directly, producing a well-formatted document that lacks the Research Notes section, the counter-argument section, and the quality review. The client-report skill is not just about formatting — it enforces analytical rigor in the final deliverable.
 
 ### Phase 6.5: Deliverable Validation (MANDATORY — no agent audits its own output)
+Invoke the skill. Its internal gates are authoritative — do not bypass.
+
 The agent that wrote the report cannot objectively audit it. Dispatch a separate validation agent to read the generated .docx alongside the upstream artifacts and produce a gap report.
 
 **Why this exists:** The client-report skill specifies mandatory quality checks (5a–5k), but when the same agent that wrote the report also runs the checks, it has sunk-cost bias toward what it already produced. The research phase already solves this problem — two analysts write, a separate validator checks. This phase extends that pattern to delivery.

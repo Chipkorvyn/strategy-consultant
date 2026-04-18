@@ -1,7 +1,7 @@
 ---
 name: problem-definition
 description: >
-  Define and scope a client problem into a sharp, decision-oriented question. Use when someone says "help me define this problem", "scope this engagement", "what's the real question here", "sharpen this problem statement", or provides a vague business challenge that needs structuring before analysis can begin. Also trigger when someone shares a client brief, RFP, or project description and needs help extracting the core analytical question.
+  Internal phase of the strategy-consultant engagement — invoke via engagement-manager, not directly. Define and scope a client problem into a sharp, decision-oriented question. Use when someone says "help me define this problem", "scope this engagement", "what's the real question here", "sharpen this problem statement", or provides a vague business challenge that needs structuring before analysis can begin. Also trigger when someone shares a client brief, RFP, or project description and needs help extracting the core analytical question.
 ---
 
 # Problem Definition

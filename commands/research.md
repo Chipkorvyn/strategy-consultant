@@ -3,6 +3,20 @@ description: Deploy three research agents to investigate a topic — two indepen
 argument-hint: "<research question or topic>"
 ---
 
+## CONTINUATION COMMAND — do not use as a fresh entry point
+
+This command continues an existing engagement. Before any other tool call:
+
+  1. Check for an engagement workspace (e.g., ./engagement/precision-anchor.md).
+  2. If it exists → continue from this phase.
+  3. If it does NOT exist → STOP. Invoke /engagement instead. engagement-manager
+     will route to the correct starting phase, including this one if appropriate.
+
+Do not attempt to run this phase cold. Upstream artifacts (Precision Anchor,
+Client Question Checklist, Source Material Extraction Log, data-source answers)
+are produced by earlier phases and required inputs here. Reconstructing them
+inside this command is not the fix — routing through engagement-manager is.
+
 # /research — Three-Agent Research
 
 > If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../CONNECTORS.md).
